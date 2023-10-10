@@ -1,32 +1,32 @@
 # Weekly assessment 7
 
-| Week 1 | Reimplement map function with this keyword so that it can be used with an array type. |     |
-| ------ | ------------------------------------------------------------------------------------- | --- |
-| Week 2 | https://www.codewars.com/kata/545af3d185166a3dec001190                                |     |
-| Week 3 | What is the Big O notation of your solution. Suggest a way to make it more optimized? |     |
-| Week 4 | https://news.ycombinator.com/ Backend                                                 |     |
-| Week 5 | Hackernews Frontend                                                                   |     |
+There are 5 Tasks in total.
+
+The instructions for task 1 to 3 are provided inside the respective folders.
+
+The instructions for task 4 and 5 are given below
 
 ## Task 4 & 5(HackerNews clone)
 
 **Functional Requirements (atleast 6)**
-Make a cline
 
-The navbar of the app should allow the user to sort news by date and popularity (upvotes)
+Make a full stack application using Angular, Express and Mongo.
 
-User Should be able to post news from a section in the same page. The post should take in a news title and url. The posting should not cause an unnecessary re-render of all the existing news.
+1. The header of the app should allow the user to sort news by date and popularity (upvotes)
 
-Posted News should appear in the news feed. Clicking the post should redirect the user to the url.
+2. User Should be able to post news from a form that exists in the same page. The post should take in a news title and url. The posting should not cause an unnecessary re-render of all the existing news.
 
-User Should be able to comment on the post.
+3. Posted News should appear in the news feed. Clicking the post should redirect the user to the url.
 
-On clicking comment the user should be redirected to a separate page where there is the news body and the comments.
+4. User Should be able to comment on the post.
 
-User Should be able to upvote. Upon upvoting the posts should rearrange and get sorted by vote count.
+5. On clicking comment the user should be redirected to a separate page where there is the news body and the comments.
 
-User Should be able to hide news
+6. User Should be able to upvote. Upon upvoting the posts should rearrange and get sorted by vote count.
 
-Date format should be relative to current time - 1min from now, 1 day ago etc
+7. User Should be able to hide news
+
+8. Date format should be relative to current time - 1min from now, 1 day ago etc
 
 **Non functional requirements**
 
@@ -34,9 +34,9 @@ The UI needs to be clean
 
 Font size needs to be the appropriate size to give users the right readability
 
-You can use this as an inspiration
+You can use this as an inspiration (This is not for copying)
 
-![Untitled](Weekly%20assessment%207%20fffcdadc3f124fa3a649c6b78eaf6da5/Untitled.png)
+![Untitled](https://res.cloudinary.com/dsuiwxwkg/image/upload/v1696948131/Frame_7_fovgmj.png)
 
 | Marking Criteria          | Elaboration                                                                                                                                                                                                                | Max Score | 1                                                                  | 2                                                                                                               | 3                                                                                                                    | 4                                                                                                                     | 5                                                                                                                             |
 | ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
