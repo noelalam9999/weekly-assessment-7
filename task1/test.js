@@ -1,5 +1,5 @@
-const myMap = require("./task1");
-
+const { myMap } = require("./task1");
+var mocks = require("./mocks.js");
 describe("map", function () {
   afterEach(function () {
     called = false;

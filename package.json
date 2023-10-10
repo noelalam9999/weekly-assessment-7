@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "test": "mocha task1/test.js task2/test.js"
+  },
+  "dependencies": {
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0"
+  }
+}

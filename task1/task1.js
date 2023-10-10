@@ -12,3 +12,7 @@
 //     return getFullName(persons);
 // }))
 // This logs Malcom Reynolds,Kaylee Frye,Jayne Cobb
+
+function myMap() {}
+
+module.exports = { myMap };

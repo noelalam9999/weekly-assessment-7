@@ -7,4 +7,6 @@
 // each_cons([1,2,3,4], 3)
 //   #=> [[1,2,3],[2,3,4]]
 
-function each_cons() {}
+function each_cons(array, n) {}
+
+module.exports = { each_cons };
