@@ -1,0 +1,31 @@
+<div class="flex justify-between">
+  <div *ngIf="service.sortedNews.length === 0" class="text-center">
+    No news yet.
+  </div>
+
+  <div class="flex flex-col mt-4 ml-20">
+    <div class="flex justify-between mb-4">
+      <div class="font-bold">Sort by:</div>
+      <div class="flex">
+        <button (click)="sortByPopularity()" class="mx-4">Popularity</button>
+        <button (click)="sortByDate()">Date</button>
+      </div>
+    </div>
+
+  <div class="flex flex-col mt-4 ml-20" >
+    <div *ngFor="let news of service.sortedNews" class="bg-white p-4 rounded-lg shadow-lg mb-4 " >
+      <div class="font-bold text-lg mb-2 cursor-pointer">
+        <a [href]="news.url">
+          {{news.title}}
+        </a>
+      </div>
+      <div class="flex items-center">
+        <i class="fas fa-arrow-up mr-1" (click)="increase(news)"></i>
+        <div class="mr-4">{{news.score}} Upvotes</div>
+        <div class="mr-4">Posted on {{news.date | date}}</div>
+        <div routerLink="/news/{{news._id}}" class="cursor-pointer">{{news.comments.length}} comments</div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-form></app-form>
