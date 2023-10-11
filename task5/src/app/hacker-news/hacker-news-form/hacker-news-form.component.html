@@ -1,0 +1,17 @@
+
+<!-- gonna use: [formGroup]="service.hackerNewsForm" object to bind form data And Handle submit Event(submit)="onSubmit()"></> -->
+<form class="row form-container" [formGroup]="service.newsForm" (submit)="onSubmit()">
+  <div class="col-12 mb-3">
+    <label class="form-label">Title</label>
+    <input type="text" class="form-control form-control-lg" placeholder="Type here" formControlName="title">
+  </div>
+
+  <div class="col-12 mb-3">
+    <label class="form-label">URL</label>
+    <input type="text" class="form-control form-control-lg" placeholder="Type in url" formControlName="url">
+  </div>
+
+  <div class="col-12 d-grid">
+    <button class="btn btn-lg btn-primary pink-btn" type="submit">Submit</button>
+  </div>
+</form>
