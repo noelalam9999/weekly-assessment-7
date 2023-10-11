@@ -1,0 +1,17 @@
+<div>
+  <div class="mb-4 border shadow-md" *ngFor="let news of newsData">
+    <div class="w-full p-4 flex flex-col justify-between items-stretch">
+      <h1 (click)="newsSite(news.url)" class="hover:text-[#fa00ff] cursor-pointer font-semibold text-3xl font-sans text-left mb-4">{{news.title}}</h1>
+      <div class="flex justify-between">
+        <div class="flex items-center gap-2 ">
+          <img class="w-5 h-5 " src="../../assets/clock.svg" alt="">
+          <p>{{news.timeDistance}}</p>
+        </div>
+        <div routerLink="news/{{news._id}}" class="flex items-center gap-2 ">
+          <img class="w-5 h-5 " src="../../assets/comments-svgrepo-com.svg" alt="">
+          <h1>Comments</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
