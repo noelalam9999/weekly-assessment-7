@@ -16,7 +16,7 @@ export class PostComponent {
   upVoteBtnClickHandler(_id: string) {
     this.service.upVoteAPost(_id).subscribe((res) => {
       this.service.fetchAllPosts();
-      this.toastr.error('Up Vote successful');
+      this.toastr.success('Up Vote successful');
     });
   }
 
@@ -31,7 +31,7 @@ export class PostComponent {
   deleteBtnClickHandler(_id: string) {
     this.service.deletePost(_id).subscribe((res) => {
       this.service.fetchAllPosts();
-      this.toastr.error('Deleted successfully');
+      this.toastr.success('Deleted successfully');
     });
   }
 }

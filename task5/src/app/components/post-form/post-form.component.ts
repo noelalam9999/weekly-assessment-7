@@ -12,16 +12,16 @@ import { PostComponent } from '../post-lists/post/post.component';
 export class PostFormComponent {
   submitted: boolean = false;
   constructor(public service: PostService, private toastr: ToastrService) {}
- 
+
   // on form submit
   onSubmit() {
     this.submitted = true;
     if (this.service.postForm.valid) {
       console.log(this.service.postForm.value);
-      this.service.postEmployee().subscribe((res) => {
+      this.service.createPost().subscribe((res) => {
         console.log('got the response');
         this.service.fetchAllPosts();
-        this.toastr.success('Created successfully', 'Employee Register');
+        this.toastr.success('Created successfully');
         this.resetForm();
       });
     } else {

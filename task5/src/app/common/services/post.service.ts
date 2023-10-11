@@ -39,7 +39,7 @@ export class PostService {
   }
 
   // create a new post
-  postEmployee() {
+  createPost() {
     return this.http
       .post(this.baseURL, this.postForm.value)
       .pipe(catchError(this.handleError));
@@ -47,13 +47,13 @@ export class PostService {
 
   // upvote a post
   upVoteAPost(id: string) {
-    const url = `${this.baseURL}/${id}/${'up'}`;
+    const url = `${this.baseURL}${id}/${'up'}`;
     return this.http.put(url, {}).pipe(catchError(this.handleError));
   }
 
   // down vote a post
   downVoteAPost(id: string) {
-    const url = `${this.baseURL}/${id}/${'down'}`;
+    const url = `${this.baseURL}${id}/${'down'}`;
     return this.http.put(url, {}).pipe(catchError(this.handleError));
   }
 
