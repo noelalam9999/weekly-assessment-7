@@ -1,0 +1,26 @@
+<div class="main">
+  <div class="formContainer">
+    <form ng-submit="todoAdd()">
+      <div class="title">
+        <h5>Title</h5>
+        <input
+          type="text"
+          ng-model="newsTitleInput"
+          size="50"
+          placeholder="Type here"
+        />
+      </div>
+      <div class="url">
+        <h5>URL</h5>
+        <input
+          type="text"
+          ng-model="todoInput"
+          size="50"
+          placeholder="type in URL"
+        />
+      </div>
+
+      <input class="submitBtn" type="submit" value="Submit" />
+    </form>
+  </div>
+</div>

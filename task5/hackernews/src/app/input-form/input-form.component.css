@@ -1,0 +1,33 @@
+.main {
+  background-color: rgb(245, 223, 28);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+form {
+  background-color: rgb(243, 163, 223);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  width: 80;
+}
+input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+h5{
+    padding: 0;
+    margin: 5px;
+    color:rgb(94, 93, 93)
+}
+.submitBtn{
+    background-color:rgb(244, 15, 209) ;
+    color: white;
+}
