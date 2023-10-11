@@ -1,0 +1,21 @@
+
+<div class="w-[60vh] border mx-auto mt-12 sha">
+  <div class="w-full p-4 flex flex-col justify-between items-stretch">
+    <h1 (click)="(news.url)" class="hover:text-[#fa00ff] cursor-pointer font-semibold text-3xl font-sans text-left mb-4">{{news.title}}</h1>
+    <div class="flex justify-between">
+      <div class="flex items-center gap-2 ">
+        <img class="w-5 h-5 " src="../../assets/clock.svg" alt="">
+        <p>{{news.timeDistance}}</p>
+      </div>
+      <div class="flex items-center gap-2 ">
+        <img class="w-5 h-5 " src="../../assets/comments-svgrepo-com.svg" alt="">
+        <h1>Comments</h1>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<div class='w-[60vh]  mx-auto mt-12'>
+  <input class="p-4 border w-full h-24" [(ngModel)]="comment" type="text" name="comment" placeholder="Enter comment">
+  <button class="w-[150px] border h-12 mt-4 text-white bg-[#fa00ff]"  (click)="onSubmit()" >Submit</button>
+</div>

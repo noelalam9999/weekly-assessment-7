@@ -7,6 +7,12 @@
 // each_cons([1,2,3,4], 3)
 //   #=> [[1,2,3],[2,3,4]]
 
-function each_cons(array, n) {}
+function each_cons(array, n) {
+    let result = [];
+    for (let i = 0; i < array.length; i += n) {
+        result.push(array.slice(i, i + n));
+    }
+    return result;
+}
 
 module.exports = { each_cons };
