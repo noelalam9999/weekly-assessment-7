@@ -1,0 +1,15 @@
+<main class="w-[90vw] m-auto pt-4" *ngIf="news">
+  <div class="mb-2">
+    <h2 class="font-bold text-lg mb-2">{{ news.title }}</h2>
+    <a [href]="news.body" target="_blank" class="font-light">{{ news.body }}</a>
+
+  </div>
+  <h3 class="font-bold underline">Comments</h3>
+  <div *ngFor="let comment of news.comments" class="font-light">
+    <p>{{ comment.comment }}</p>
+  </div>
+  <div class="mt-4">
+    <input type="text" name="comment" id="comment" [(ngModel)]="comment" class="rounded-md w-[50%] p-2 mb-2 border-gray-500 bg-[#F2F2F2]"> <br>
+    <button (click)="onSubmit()" type="button" class="bg-[#F624FF] p-2 rounded-md w-[50%]">Post comment</button>
+  </div>
+</main>

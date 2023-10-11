@@ -1,0 +1,41 @@
+
+
+<div class="flex gap-2 font-thin p-4">
+  <input
+  type="radio"
+  name="sort"
+  id="sortByDate"
+  value="sortByDate"
+  [(ngModel)]="isSortByDate"
+  (change)="sortByDates()">
+  <label for="sortByDate">Sort by date</label>
+  <input
+   type="radio"
+    name="sort"
+    id="sortByPopularity"
+    value="sortByPopularity"
+    [(ngModel)]="isSortByPopularity"
+    (change)="sortByVotes()">
+  <label for="sortByPopularity">Sort by popularity</label>
+</div>
+
+<div
+  *ngFor="let news of allNews"
+  class="rounded-lg shadow-[10px_10px_60px_-15px_rgba(0,0,0,0.3)] mt-4 mb-4 p-4 cursor-text"
+  >
+  <div class="mb-2">
+    <h2 class="font-bold text-lg mb-2">{{ news.title }}</h2>
+    <a [href]="news.body" target="_blank" class="font-light">{{ news.body }}</a>
+  </div>
+  <div class="flex gap-2 font-thin text-[0.875rem]">
+
+    <p><i class="fa-regular fa-clock"></i> {{ news.date | dateFormat }}</p>
+    <p> | </p>
+    <p [routerLink]="['/news/', news._id]" class="cursor-pointer">{{ news.comments.length }} comment{{news.comments.length>1 ? 's' : ''}}</p>
+    <p> | </p>
+    <p (click)="vote(news._id)" class="cursor-pointer">{{news.votes}} <i class="fa-regular fa-thumbs-up"></i></p>
+    <p> | </p>
+    <p (click)="hide(news._id)" class="cursor-pointer"><i class="fa-regular fa-eye-slash"></i></p>
+  </div>
+
+</div>

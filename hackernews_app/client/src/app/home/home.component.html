@@ -1,0 +1,15 @@
+
+<main class="w-[90vw] m-auto pt-4">
+  <div>
+    <button type="button" class="p-2 bg-[#F624FF] rounded-xl font-bold text-xl mr-4">New</button>
+    <button type="button" class="p-2 bg-[#F2F2F2] rounded-xl font-bold text-xl">Past</button>
+  </div>
+  <div class="flex">
+    <div class="basis-[50%]">
+      <app-blog [allNews]="allNews"></app-blog>
+    </div>
+    <div class="basis-[50%]">
+      <app-blog-form (dataPostedEvent) ="newDataPosted($event)"></app-blog-form>
+    </div>
+  </div>
+</main>
