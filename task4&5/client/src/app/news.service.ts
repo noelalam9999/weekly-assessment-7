@@ -62,7 +62,9 @@ export class NewsService {
       .pipe(catchError(this.errorHandler))
       .subscribe((data) => {
         this.list = data as News[];
-        return this.list.sort((a, b) => b.votes - a.votes);
+        const sortedList = this.list.sort((a, b) => b.votes - a.votes);
+        console.log(typeof sortedList[0].date);
+        return sortedList;
       });
   }
 
