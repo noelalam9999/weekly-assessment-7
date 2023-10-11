@@ -1,0 +1,7 @@
+<h1>{{news.title}}</h1>
+<p>{{news.details}}</p>
+<h4><span>-</span><span>0</span><span>+</span></h4>
+<form (ngSubmit)="addComment()">
+    <input [(ngModel)]="comment" name="comment" type="text" placeholder="add a comment" class="border p-4 m-2">
+<input type="submit" value="Add Comment" class="bg-blue-600 text-white p-4">
+</form>
