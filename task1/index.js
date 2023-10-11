@@ -13,6 +13,15 @@
 // }))
 // This logs Malcom Reynolds,Kaylee Frye,Jayne Cobb
 
-function myMap(collection, iteratee, context) {}
+function myMap(collection, iteratee, context) {
+  const result = [];
+  for (const key in collection) {
+    if (collection.hasOwnProperty(key)) {
+      const value = collection[key];
+      result.push(iteratee.call(context, value, key, collection));
+    }
+  }
+  return result;
+}
 
 module.exports = { myMap };

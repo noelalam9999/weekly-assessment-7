@@ -1,0 +1,31 @@
+<div class="container mx-auto px-4 py-8">
+  <div class="mb-4">
+    <label for="sort">Sort by:</label>
+    <select id="sort" (change)="onSortChange($event)">
+      <option value="date">Date</option>
+      <option value="upvotes">Upvotes</option>
+    </select>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="bg-white shadow rounded-lg p-4" *ngIf="newsList.length > 0">
+      <div *ngFor="let news of sortedNewsList" class="mb-4">
+        <div>
+          <h2 class="text-xl font-semibold">{{ news.title }}</h2>
+          <p>Votes: {{ news.upvotes }}</p>
+          <a [href]="news.url" target="_blank" class="text-blue-500">{{ news.url }}</a>
+          <p class="text-gray-500">Posted {{ news.createdAt | relativeDate }}</p>
+          <button (click)="upvote(news)" class="bg-blue-500 text-white px-2 py-1 mr-2 rounded">Upvote</button>
+          <button (click)="hide(news)" class="bg-red-500 text-white px-2 py-1 mr-2 rounded">Hide</button>
+          <a [routerLink]="['/news', news._id]" class="bg-gray-500 text-white px-2 py-1 rounded">Comment</a>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="newsList.length === 0">
+      <p>No news yet.</p>
+    </div>
+    <div class="bg-white shadow rounded-lg p-4">
+      <app-news-form (create)="createNews($event)"></app-news-form>
+    </div>
+  </div>
+</div>
