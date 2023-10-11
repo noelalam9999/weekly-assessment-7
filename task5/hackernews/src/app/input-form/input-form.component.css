@@ -1,5 +1,5 @@
 .main {
-  background-color: rgb(245, 223, 28);
+  
   padding: 10px;
   display: flex;
   justify-content: space-between;
@@ -30,4 +30,7 @@ h5{
 .submitBtn{
     background-color:rgb(244, 15, 209) ;
     color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
 }

@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./news-list.component.css']
 })
 export class NewsListComponent {
-
+  news = {
+    title: 'breaking news',
+    url: 'bbc',
+    desc: 'alsjfs alsdjfls ldsjfla'
+  }
 }

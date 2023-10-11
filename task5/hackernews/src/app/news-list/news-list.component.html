@@ -1,14 +1,13 @@
 <div class="newslist">
     <button>New</button>
     <button>Past</button>
-    <div ng-repeat="x in todoList">
-      <h4>newsTitle</h4>
-      <p class="">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque
-          praesentium cumque iure dicta incidunt est ipsam, officia dolor fugit
-          natus?
-        </p>
+
+    <div class='newsCart' ng-repeat="news in newsList">
+      <h4>{{news.title}}</h4>
+      <p>{{news.desc}}</p>
+      <p>time | comments</p>
       
     </div>
 
   </div>
+

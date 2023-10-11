@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./input-form.component.css']
 })
 export class InputFormComponent {
-
+  // inputFormComponent: InputFormComponent={
+  //   title: string,
+  //   url: string
+  // }
+  // newNews = 'hello';
 }
