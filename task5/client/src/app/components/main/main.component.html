@@ -1,0 +1,5 @@
+<p>main works!</p>
+<div style="grid-template-columns: 5fr 3fr; grid-gap: 20px; padding: 10px 40px;" class=" mx-auto my-10 grid">
+    <app-news [news]="news"></app-news>
+    <app-news-form (addNewNews)="addNewNews($event)"></app-news-form>
+</div>
