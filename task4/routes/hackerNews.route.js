@@ -9,7 +9,7 @@ const { getAllNews, getNewsById, postNews } = require('../controllers/hackerNews
 router.get('/', getAllNews);
 router.get('/:id', getNewsById);
 router.post('/', postNews);
-h
+
 
 
 
