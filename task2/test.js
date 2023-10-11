@@ -2,7 +2,7 @@
 
 require("chai").should();
 
-var { each_cons } = require("./task2.js");
+var { each_cons } = require("./index.js");
 
 describe("Each Cons", function () {
   it("Should return cascading lists of 1 element", function () {

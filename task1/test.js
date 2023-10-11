@@ -1,4 +1,4 @@
-const { myMap } = require("./task1");
+const { myMap } = require("./index.js");
 var mocks = require("./mocks.js");
 describe("map", function () {
   afterEach(function () {
