@@ -19,9 +19,6 @@ export class PostService {
     _id: [null],
     title: ['', Validators.required],
     url: ['', Validators.required],
-    comments: [''],
-    votes: [''],
-    time: [''],
   });
 
   // fetch all posts

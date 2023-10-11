@@ -37,10 +37,9 @@ const getSinglePost = async (req, res) => {
 
 //! create a new post
 const addNewPost = async (req, res) => {
-  const { title, venue, date } = await req.body;
-  console.log(title, venue, date);
+  const { title, url } = await req.body;
   try {
-    const newEvent = new Post(req.body);
+    const newEvent = new Post({ title, url });
     await newEvent.save();
     res.status(201).json({
       data: newEvent,
