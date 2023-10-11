@@ -1,0 +1,73 @@
+/* You can add global styles to this file, and also import other style files */
+.title-text {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  word-spacing: -10px;
+
+}
+
+.border-bottom {
+  padding: 12px 0px;
+  -webkit-box-shadow: -2px -1px 15px 7px rgba(163, 162, 162, 0.35);
+  -moz-box-shadow: -3px -2px 30px 14px rgba(163, 162, 162, 0.35);
+  box-shadow: -4px -3px 45px 21px rgba(163, 162, 162, 0.35);
+  margin-bottom: 20px;
+}
+
+.pink {
+  color: #FA00FF;
+}
+
+.form-container {
+  padding: 25px 10px;
+  background-color: #F1A6F2;
+  border-radius: 16px;
+}
+
+.pink-btn {
+  background-color: #FA00FF;
+  border-color: transparent;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.pink-btn:hover,
+.pink-btn:focus,
+.pink-btn:active {
+  background-color: #cf4dd1;
+  border-color: transparent;
+}
+
+input::placeholder {
+  font-size: 14px;
+}
+
+label {
+  font-size: 14px;
+  color: #726868;
+  font-weight: 700;
+}
+
+.pills {
+  padding: 10px;
+  border-radius: 20px;
+  margin-right: 5px;
+  cursor: pointer;
+  background-color: #FA00FF!important;
+}
+
+.pills:hover {
+  background-color: #cf4dd1!important;
+}
+
+.card-group {
+  margin-top: 20px;
+}
+
+.card-url-text {
+ cursor: pointer;
+ font-size: 16px;
+}
