@@ -1,0 +1,26 @@
+<div class="container mx-auto mt-5">
+  <div class="shadow rounded-lg p-4">
+    <div *ngIf="news">
+      <h2 class="text-xl font-semibold">{{ news.title }}</h2>
+      <p>{{ news.upvotes }} Upvotes</p>
+      <a [href]="news.url" target="_blank">{{ news.url }}</a>
+    </div>
+
+    <div *ngIf="comments" class="mt-[20px]">
+      <h3>Comments</h3>
+      <ul>
+        <li *ngFor="let comment of comments">
+          <app-comment [comment]="comment"></app-comment>
+        </li>
+      </ul>
+    </div>
+
+    <div class="mt-4">
+      <h3>Add a Comment</h3>
+      <textarea class="w-full rounded border border-gray-300 p-2 mt-2" [(ngModel)]="newComment"></textarea>
+      <button (click)="addComment()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2">
+        Submit Comment
+      </button>
+    </div>
+  </div>
+</div>
