@@ -3,7 +3,7 @@ export interface News {
   title: string;
   body: string;
   url: string;
-  date: string;
+  date: number;
   votes: number;
   comments: { content: string; date: string; id: string }[];
 }

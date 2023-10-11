@@ -62,7 +62,9 @@ export class NewsService {
       .pipe(catchError(this.errorHandler))
       .subscribe((data) => {
         this.list = data as News[];
-        const sortedList = this.list.sort((a, b) => b.votes - a.votes);
+        const sortedList = this.list.sort(
+          (a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf()
+        );
         console.log(typeof sortedList[0].date);
         return sortedList;
       });
@@ -89,6 +91,12 @@ export class NewsService {
     console.log(this.addCommentForm.value);
     return this.http
       .put(`${this.baseURL}${id}`, this.addCommentForm.value)
+      .pipe(catchError(this.errorHandler));
+  }
+
+  upVote(id: string, vote: number) {
+    return this.http
+      .put(`${this.baseURL}${id}/up`, { vote: vote })
       .pipe(catchError(this.errorHandler));
   }
 

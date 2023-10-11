@@ -47,3 +47,16 @@ exports.postComment = (req, res) => {
     res.sendStatus(400);
   }
 };
+
+exports.postVote = (req, res) => {
+  try {
+    const id = req.params.id;
+    const vote = req.body.vote;
+    const updatedNews = news.upVoteOne({ id, vote });
+    res.status(201);
+    res.json(updatedNews);
+  } catch (error) {
+    console.log('error:', error);
+    res.sendStatus(400);
+  }
+};
