@@ -14,5 +14,4 @@
 // This logs Malcom Reynolds,Kaylee Frye,Jayne Cobb
 
 function myMap(collection, iteratee, context) {}
-
 module.exports = { myMap };
