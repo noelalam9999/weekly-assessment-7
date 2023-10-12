@@ -1,0 +1,30 @@
+<form
+  class="ml-[40px] p-8 bg-[#fb00ff75] rounded-lg gap-4 flex flex-col"
+  [formGroup]="service.addNewsForm"
+  (submit)="onSubmit()"
+>
+  <div class="flex flex-col justify-start gap-4 text-black">
+    <label for="title">Title</label>
+    <input
+      class="py-5 px-4 rounded-md"
+      type="text"
+      placeholder="Type here"
+      formControlName="title"
+    />
+  </div>
+  <div class="flex flex-col justify-start gap-4 text-black">
+    <label for="url">URL</label>
+    <input
+      class="py-5 px-4 rounded-md"
+      type="text"
+      placeholder="Type in url"
+      formControlName="url"
+    />
+  </div>
+  <button
+    class="bg-[#FA00FF] w-full text-white text-bold w-100 py-3 rounded-lg ml-auto"
+    type="submit"
+  >
+    Submit
+  </button>
+</form>
