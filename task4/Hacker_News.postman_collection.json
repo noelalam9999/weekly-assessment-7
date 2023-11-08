@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "249d5b40-6f90-44e5-b92c-e24c44136085",
+		"name": "Hacker News",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29828318"
+	},
+	"item": [
+		{
+			"name": "Create A Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"CSS Is, in Fact, Awesome (css-tricks.com)\",\r\n    \"url\": \"https://css-tricks.com/css-is-in-fact-awesome/\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/posts/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"posts",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAll Posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/posts/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"posts",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Single Posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/posts/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"posts",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete A Post",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/posts/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"posts",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Up Vote",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/posts/65261d1c8c8651ad0b235060/up",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"posts",
+						"65261d1c8c8651ad0b235060",
+						"up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Down Vote",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/posts/65261d1c8c8651ad0b235060/down",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"posts",
+						"65261d1c8c8651ad0b235060",
+						"down"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ERROR",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:5000"
+		}
+	]
+}

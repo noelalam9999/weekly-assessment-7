@@ -1,0 +1,27 @@
+<form
+  action=""
+  class="row"
+  [formGroup]="service.postForm"
+  (submit)="onSubmit()"
+  [class.submitted]="submitted"
+>
+  <div class="col-md-12 mb-3">
+    <label class="form-label">Title</label>
+    <input
+      class="form-control form-control-lg"
+      placeholder="Enter news title"
+      formControlName="title"
+    />
+  </div>
+  <div class="col-md-12 mb-3">
+    <label class="form-label">URL</label>
+    <input
+      class="form-control form-control-lg"
+      placeholder="Enter news source URL"
+      formControlName="url"
+    />
+  </div>
+  <div class="com-md-12 d-grid">
+    <button class="btn btn-primary btn-primary" type="submit">Submit</button>
+  </div>
+</form>

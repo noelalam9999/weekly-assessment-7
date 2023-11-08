@@ -1,0 +1,52 @@
+$boxShadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+$easein: all 0.2s ease-in;
+$easeout: all 0.2s ease-out;
+
+.btn {
+  transition: $easeout;
+}
+.btn:hover {
+  box-shadow: $boxShadow;
+  transition: $easein;
+}
+.bottom-btn-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+}
+.upvote-btn:hover {
+  background-color: limegreen;
+  color: white;
+}
+.downvote-btn:hover {
+  background-color: orange;
+  color: white;
+}
+
+.comment-btn:hover {
+  background-color: lightblue;
+  color: white;
+}
+.delete-btn:hover {
+  background-color: red;
+  color: white !important;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+.title:hover {
+  text-decoration: underline;
+}
+
+.card {
+  transition: $easeout;
+}
+.card:hover {
+  box-shadow: $boxShadow;
+  transition: $easein;
+}
